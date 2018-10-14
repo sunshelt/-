@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0,user-scalable=no,initial-scale=1.0">
+    <link rel="stylesheet" href="cishi.css">
+</head>
+<body>
+
+
+<div id="bluebubble" onclick="read()">
+
+    <div id="whitebubble">
+        <div id="dot">
+
+            <div id="dotdot"></div>
+            <div id="dotdotdot"></div>
+        </div>
+        <div id="pointyend2">
+            <div id="curve2"></div>
+        </div>
+
+
+
+    <div id="notify">
+        <div id="circle">
+            <p id="messages"></p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script>
+var messages = Math.floor((Math.random()*9)+1);
+document.getElementById("messages").innerHTML = messages;
+
+
+function read(){
+var mess = document.getElementById("messages").innerHTML
+if(mess >1){
+mess--;
+document.getElementById("messages").innerHTML=mess;
+
+
+}else{
+
+document.getElementById("notify").innerHTML="";
+
+}
+}
+</script>
+</body>
+</html>
